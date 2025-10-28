@@ -15,10 +15,16 @@ function view () {
   let n = Number (number.value) ;
   for (let i=0;i<array.length; i++) {
     if (n==array[i]) {
-      out.textContent="Numero trovato!" ;
+      trovato=true;
       break ;
     }
     
+  }
+  if (f) {
+    out.textContent="Numero trovato!" ;
+  }
+  else {
+    out.textContent="Numero non presente" ;
   }
   
   
