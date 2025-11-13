@@ -26,6 +26,7 @@ out.textContent=mins+":"+secs ;
 
 function start()  {
     if (!tomato.running) {//Se non è partito già lo faccio partire
+        //setTimeout(p1,p2) esegue p1 solo 1 volta, tra p2 tempo
         tomato.timer=setInterval(tick, 1000) ; //Cosa fare, ogni tot.tempo
         tomato.running=true;
     }
@@ -37,5 +38,13 @@ function reset() {
     clearInterval(tomato.timer);
     showTimer();
 }
+
+function pausa () {
+    //fa partire un timer di 5 minuti
+    tomato.seconds=5*60;
+    clearInterval(tomato.timer);
+    showTimer();
+}
 startBtn.addEventListener("click",start);
 resetBtn.addEventListener("click",reset);
+pauseBtn.addEventListener("click",pausa);
