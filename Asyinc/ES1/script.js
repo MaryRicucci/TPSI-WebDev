@@ -38,7 +38,7 @@ fetch(URL).then(response =>{
 .then(data => {
     for (key in data){
                 if ((key==="name")||(key==="id")){
-                out.textContent+=(data[key]);
+                out.textContent+=' '+(data[key]);
             }}
 })
 .catch(error => console.log(error));
